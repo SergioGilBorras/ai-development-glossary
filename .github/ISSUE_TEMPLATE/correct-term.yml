@@ -1,0 +1,43 @@
+name: "✏️ Correct or improve a term / Mejorar definición"
+description: "Fix a translation, definition, usage example or reference"
+title: "[Correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for keeping this glossary accurate. All suggestions are reviewed.
+        Gracias por ayudarnos a mantener el glosario correcto. Revisamos todas las propuestas.
+  - type: input
+    id: term
+    attributes:
+      label: "Term / Término"
+      description: "Please identify the term and optionally its link / Indica el término y, si puedes, su enlace"
+      placeholder: "Handoff"
+    validations:
+      required: true
+  - type: dropdown
+    id: correction_type
+    attributes:
+      label: "Improvement type / Tipo de mejora"
+      options:
+        - "English definition / Definición inglesa"
+        - "Spanish definition / Definición española"
+        - "Translation / Traducción"
+        - "Usage example / Ejemplo"
+        - "Related terms / Relacionados"
+        - "External reference / Referencia externa"
+        - "Other / Otro"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed correction / Corrección propuesta"
+      description: "Explain what should change and why / Indica qué modificarías y por qué"
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: "Supporting source / Fuente de apoyo"
+      placeholder: "https://..."

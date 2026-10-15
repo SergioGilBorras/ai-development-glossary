@@ -1,0 +1,83 @@
+name: "📘 New glossary term / Nuevo término"
+description: "Propose a new AI development concept / Propón un concepto de IA"
+title: "[New term] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the bilingual AI glossary! / ¡Gracias por ampliar el glosario bilingüe!
+        Proposals are **reviewed before publication**. You can submit a definition in just one language; maintainers can help translate it.
+        Las propuestas se **revisan antes de publicarse**. Puedes enviar la definición en un solo idioma.
+  - type: input
+    id: english_term
+    attributes:
+      label: "English term / Término en inglés"
+      placeholder: "Example: Agent routing"
+    validations:
+      required: true
+  - type: input
+    id: spanish_term
+    attributes:
+      label: "Spanish equivalent / Equivalente en español"
+      placeholder: "Ejemplo: Enrutamiento de agentes"
+    validations:
+      required: false
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Category / Categoría"
+      options:
+        - "Fundamentos y flujo de trabajo"
+        - "Prompts y gestión del contexto"
+        - "Modelos y entrenamiento"
+        - "RAG y conocimiento"
+        - "Agentes y orquestación"
+        - "Programación asistida por IA"
+        - "Evaluación y calidad"
+        - "Seguridad y privacidad"
+        - "Datos, MLOps y observabilidad"
+        - "Infraestructura y rendimiento"
+        - "Documentación de ingeniería"
+        - "Ámbito jurídico y legaltech"
+        - "Gobernanza y cumplimiento"
+        - "Multimodalidad y documentos"
+        - "Producto y experiencia de usuario"
+        - "Other / Otra"
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: "Definition / Definición"
+      description: "Explain what the concept means. English and/or Spanish. / Explica el significado en inglés y/o español."
+      placeholder: "English: ...\nEspañol: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: "Realistic usage example / Ejemplo de uso"
+      description: "Optional but highly recommended. / Opcional, pero muy recomendable."
+    validations:
+      required: false
+  - type: input
+    id: source
+    attributes:
+      label: "Reference URL / URL de referencia"
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: input
+    id: related
+    attributes:
+      label: "Related terms / Términos relacionados"
+      description: "Existing terms, comma-separated / Términos existentes, separados por comas"
+    validations:
+      required: false
+  - type: checkboxes
+    id: check
+    attributes:
+      label: "Checklist / Comprobación"
+      options:
+        - label: "I checked the glossary for duplicates / He comprobado que no está duplicado"
+          required: true

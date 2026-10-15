@@ -1,0 +1,1394 @@
+{
+  "IA-011": {
+    "example_en": "A customer-support agent hands a billing case to the billing agent, passing along the conversation context.",
+    "example_es": "Un agente de soporte transfiere un caso de facturación a otro agente, junto con el contexto de la conversación.",
+    "related_ids": [
+      "IA-146",
+      "IA-147",
+      "IA-140",
+      "IA-143"
+    ],
+    "aliases": [
+      "agent handover",
+      "transfer of control"
+    ]
+  },
+  "IA-012": {
+    "example_en": "Before publishing a generated report, the pipeline checks that all sections, references and files are present.",
+    "example_es": "Antes de publicar un informe generado, el proceso comprueba que estén todas las secciones, referencias y archivos.",
+    "related_ids": [
+      "IA-229",
+      "IA-230",
+      "IA-019",
+      "IA-028"
+    ]
+  },
+  "IA-013": {
+    "example_en": "A research summary records which source documents support each generated conclusion.",
+    "example_es": "Un resumen de investigación registra qué documentos respaldan cada conclusión generada.",
+    "related_ids": [
+      "IA-014",
+      "IA-015",
+      "IA-309",
+      "IA-450"
+    ]
+  },
+  "IA-014": {
+    "example_en": "An engineering team links requirement REQ-17 to its design decision and acceptance test.",
+    "example_es": "Un equipo de ingeniería vincula el requisito REQ-17 con su decisión de diseño y su prueba de aceptación.",
+    "related_ids": [
+      "IA-013",
+      "IA-015",
+      "IA-309",
+      "IA-450"
+    ]
+  },
+  "IA-015": {
+    "example_en": "A dataset record shows that a table was derived from two source files and a cleaning step.",
+    "example_es": "Un registro de datos muestra que una tabla procede de dos archivos y un proceso de limpieza.",
+    "related_ids": [
+      "IA-013",
+      "IA-014",
+      "IA-309",
+      "IA-450"
+    ]
+  },
+  "IA-026": {
+    "example_en": "A human reviewer must approve an AI-drafted legal opinion before it is sent to a client.",
+    "example_es": "Un revisor humano debe aprobar una opinión jurídica redactada con IA antes de enviarla al cliente."
+  },
+  "IA-006": {
+    "example_en": "A developer asks a model to summarize a technical specification in five bullet points.",
+    "example_es": "Un desarrollador pide al modelo que resuma una especificación técnica en cinco puntos.",
+    "related_ids": [
+      "IA-033",
+      "IA-034",
+      "IA-035",
+      "IA-053",
+      "IA-261"
+    ]
+  },
+  "IA-037": {
+    "example_en": "An assistant receives the user request, relevant project files and tool results instead of the full repository.",
+    "example_es": "Un asistente recibe la petición, los archivos relevantes y los resultados de herramientas, en lugar de todo el repositorio.",
+    "related_ids": [
+      "IA-038",
+      "IA-041",
+      "IA-044",
+      "IA-042"
+    ]
+  },
+  "IA-038": {
+    "example_en": "A long conversation is summarized before it exceeds the model’s available context window.",
+    "example_es": "Se resume una conversación extensa antes de superar la ventana de contexto disponible.",
+    "related_ids": [
+      "IA-037",
+      "IA-041",
+      "IA-044",
+      "IA-042"
+    ]
+  },
+  "IA-050": {
+    "example_en": "A prompt includes three correctly formatted JSON examples before asking the model to produce a fourth.",
+    "example_es": "Una instrucción incluye tres ejemplos JSON válidos antes de pedir al modelo que genere un cuarto."
+  },
+  "IA-061": {
+    "example_en": "An extraction assistant returns an object with name, date and invoice total as predefined JSON fields.",
+    "example_es": "Un asistente de extracción devuelve nombre, fecha e importe de factura en campos JSON predefinidos.",
+    "related_ids": [
+      "IA-062",
+      "IA-063",
+      "IA-060"
+    ]
+  },
+  "IA-064": {
+    "example_en": "A test team keeps temperature low to reduce variation between repeated extraction requests.",
+    "example_es": "Un equipo de pruebas usa una temperatura baja para reducir las diferencias entre extracciones repetidas.",
+    "related_ids": [
+      "IA-065",
+      "IA-066",
+      "IA-250"
+    ]
+  },
+  "IA-075": {
+    "example_en": "An organization adapts a pretrained model using approved examples from its support workflow.",
+    "example_es": "Una organización adapta un modelo preentrenado con ejemplos aprobados de su proceso de soporte.",
+    "related_ids": [
+      "IA-076",
+      "IA-096",
+      "IA-097",
+      "IA-098"
+    ]
+  },
+  "IA-094": {
+    "example_en": "A deployment team uses lower-precision model weights to reduce memory consumption.",
+    "example_es": "Un equipo de despliegue reduce la precisión de los pesos del modelo para disminuir el uso de memoria."
+  },
+  "IA-103": {
+    "example_en": "An internal chatbot retrieves the latest company policy before drafting an answer with citations.",
+    "example_es": "Un chatbot interno recupera la política vigente de la empresa antes de responder con citas.",
+    "related_ids": [
+      "IA-104",
+      "IA-127",
+      "IA-128",
+      "IA-105"
+    ],
+    "aliases": [
+      "RAG"
+    ]
+  },
+  "IA-105": {
+    "example_en": "Product descriptions are converted into numerical vectors to find semantically similar items.",
+    "example_es": "Se convierten las descripciones de productos en vectores numéricos para encontrar artículos similares.",
+    "related_ids": [
+      "IA-103",
+      "IA-104",
+      "IA-127",
+      "IA-128",
+      "IA-107"
+    ]
+  },
+  "IA-115": {
+    "example_en": "A 100-page handbook is divided into short passages before indexing it for retrieval.",
+    "example_es": "Un manual de 100 páginas se divide en fragmentos antes de indexarlo para búsquedas.",
+    "related_ids": [
+      "IA-114",
+      "IA-116",
+      "IA-117"
+    ]
+  },
+  "IA-119": {
+    "example_en": "After retrieving 30 passages, a reranker selects the five most relevant for the user’s question.",
+    "example_es": "Tras recuperar 30 fragmentos, un reranker selecciona los cinco más relevantes para la pregunta.",
+    "related_ids": [
+      "IA-120",
+      "IA-112",
+      "IA-111",
+      "IA-113"
+    ]
+  },
+  "IA-127": {
+    "example_en": "An assistant answers a regulatory question using passages from the actual regulation.",
+    "example_es": "Un asistente responde una pregunta normativa basándose en fragmentos del reglamento original.",
+    "related_ids": [
+      "IA-103",
+      "IA-104",
+      "IA-128",
+      "IA-105"
+    ]
+  },
+  "IA-137": {
+    "example_en": "An agent plans a task, calls a repository search tool and uses the results to decide its next step.",
+    "example_es": "Un agente planifica una tarea, consulta el repositorio con una herramienta y decide el siguiente paso.",
+    "related_ids": [
+      "IA-138",
+      "IA-139",
+      "IA-178",
+      "IA-177"
+    ]
+  },
+  "IA-146": {
+    "example_en": "A triage agent routes a tax question to a specialist tax agent with the required case context.",
+    "example_es": "Un agente de clasificación transfiere una consulta tributaria a un agente experto con el contexto necesario.",
+    "related_ids": [
+      "IA-011",
+      "IA-147",
+      "IA-140",
+      "IA-143"
+    ]
+  },
+  "IA-147": {
+    "example_en": "A lead agent assigns document extraction to one specialized worker and validation to another.",
+    "example_es": "Un agente principal encarga la extracción documental a un subagente y la validación a otro.",
+    "related_ids": [
+      "IA-011",
+      "IA-146",
+      "IA-140",
+      "IA-143"
+    ]
+  },
+  "IA-148": {
+    "example_en": "An assistant invokes a calendar tool to check available meeting times rather than guessing.",
+    "example_es": "Un asistente invoca una herramienta de calendario para consultar horarios en lugar de adivinarlos.",
+    "related_ids": [
+      "IA-149",
+      "IA-150",
+      "IA-151",
+      "IA-154"
+    ]
+  },
+  "IA-153": {
+    "example_en": "A coding assistant connects to a tool server through MCP to inspect project documentation.",
+    "example_es": "Un asistente de programación se conecta a un servidor de herramientas mediante MCP para consultar documentación.",
+    "related_ids": [
+      "IA-154",
+      "IA-155",
+      "IA-156",
+      "IA-157"
+    ],
+    "aliases": [
+      "MCP"
+    ]
+  },
+  "IA-170": {
+    "example_en": "A policy check blocks an agent from sending an email with confidential content without approval.",
+    "example_es": "Una salvaguarda bloquea el envío automático de un correo confidencial sin aprobación."
+  },
+  "IA-191": {
+    "example_en": "A developer reviews an AI-generated patch for correctness, readability and test coverage.",
+    "example_es": "Un desarrollador revisa un parche generado por IA para comprobar su corrección, legibilidad y pruebas.",
+    "related_ids": [
+      "IA-188",
+      "IA-189",
+      "IA-190",
+      "IA-192"
+    ]
+  },
+  "IA-190": {
+    "example_en": "A contributor opens a pull request proposing three new glossary definitions for review.",
+    "example_es": "Un colaborador abre una pull request con tres nuevas definiciones para que sean revisadas.",
+    "related_ids": [
+      "IA-191",
+      "IA-188",
+      "IA-189",
+      "IA-192"
+    ]
+  },
+  "IA-211": {
+    "example_en": "Every pull request runs the glossary validator and static-site builder before merging.",
+    "example_es": "Cada pull request ejecuta el validador del glosario y la generación de la web antes de integrarse.",
+    "related_ids": [
+      "IA-212",
+      "IA-213",
+      "IA-214"
+    ]
+  },
+  "IA-228": {
+    "example_en": "After changing the search algorithm, existing queries are rerun to catch previously solved failures.",
+    "example_es": "Tras modificar el buscador, se repiten consultas anteriores para detectar errores reintroducidos.",
+    "related_ids": [
+      "IA-207",
+      "IA-208",
+      "IA-209",
+      "IA-226"
+    ]
+  },
+  "IA-244": {
+    "example_en": "An assistant invents a nonexistent court ruling; citation verification catches the mistake.",
+    "example_es": "Un asistente inventa una sentencia inexistente y la verificación de citas detecta el error.",
+    "related_ids": [
+      "IA-245",
+      "IA-246",
+      "IA-458",
+      "IA-426"
+    ]
+  },
+  "IA-233": {
+    "example_en": "A second model scores whether the first model’s summary covers the required facts.",
+    "example_es": "Un segundo modelo evalúa si el resumen del primero cubre los hechos exigidos.",
+    "related_ids": [
+      "IA-234",
+      "IA-236",
+      "IA-221",
+      "IA-223"
+    ]
+  },
+  "IA-261": {
+    "example_en": "A retrieved webpage tries to make a research agent ignore the user’s instructions.",
+    "example_es": "Una página recuperada intenta que un agente investigador ignore las instrucciones del usuario.",
+    "related_ids": [
+      "IA-006",
+      "IA-033",
+      "IA-034",
+      "IA-035",
+      "IA-053"
+    ]
+  },
+  "IA-267": {
+    "example_en": "Before sharing test data with a model, the team removes names and email addresses.",
+    "example_es": "Antes de compartir datos de prueba con un modelo, el equipo elimina nombres y correos electrónicos.",
+    "related_ids": [
+      "IA-265",
+      "IA-266",
+      "IA-271"
+    ]
+  },
+  "IA-313": {
+    "example_en": "Monitoring detects that incoming support messages have changed compared with training samples.",
+    "example_es": "La monitorización detecta que los mensajes de soporte han cambiado respecto a los ejemplos de entrenamiento.",
+    "related_ids": [
+      "IA-314",
+      "IA-315",
+      "IA-335",
+      "IA-327"
+    ]
+  },
+  "IA-321": {
+    "example_en": "The team inspects logs, traces and latency to understand why the agent failed a task.",
+    "example_es": "El equipo revisa registros, trazas y latencia para entender por qué falló la tarea de un agente.",
+    "related_ids": [
+      "IA-322",
+      "IA-323",
+      "IA-326",
+      "IA-325"
+    ]
+  },
+  "IA-349": {
+    "example_en": "A chatbot team measures the delay between a user request and the start of the answer.",
+    "example_es": "Un equipo mide el tiempo desde que se envía una consulta hasta que comienza la respuesta.",
+    "related_ids": [
+      "IA-350",
+      "IA-351",
+      "IA-352"
+    ]
+  },
+  "IA-394": {
+    "example_en": "An AI-assisted requirements report links each requirement to a test and supporting evidence.",
+    "example_es": "Un informe de requisitos asistido por IA vincula cada requisito con una prueba y sus evidencias.",
+    "related_ids": [
+      "IA-369",
+      "IA-392",
+      "IA-393",
+      "IA-418"
+    ]
+  },
+  "IA-367": {
+    "example_en": "An engineer checks AI-drafted equipment requirements against the approved project design basis.",
+    "example_es": "Un ingeniero comprueba los requisitos de equipos redactados con IA frente a las bases de diseño aprobadas."
+  },
+  "IA-375": {
+    "example_en": "Before drafting detailed engineering documents, the team approves design assumptions in a DBM.",
+    "example_es": "Antes de preparar documentación de detalle, el equipo aprueba las hipótesis de diseño en una memoria DBM.",
+    "related_ids": [
+      "IA-376",
+      "IA-377",
+      "IA-378"
+    ]
+  },
+  "IA-398": {
+    "example_en": "An engineering team records why it selected a vector database over a relational search solution.",
+    "example_es": "Un equipo registra por qué eligió una base vectorial frente a una solución de búsqueda relacional.",
+    "related_ids": [
+      "IA-399",
+      "IA-416",
+      "IA-395"
+    ]
+  },
+  "IA-419": {
+    "example_en": "A lawyer asks a research assistant to find relevant cases, then checks the original judgments.",
+    "example_es": "Una abogada solicita jurisprudencia a un asistente y después verifica las sentencias originales.",
+    "related_ids": [
+      "IA-420",
+      "IA-425",
+      "IA-426",
+      "IA-428"
+    ]
+  },
+  "IA-426": {
+    "example_en": "A lawyer checks that every case cited by an AI draft exists and supports the legal argument.",
+    "example_es": "Un abogado comprueba que cada sentencia citada en un borrador de IA existe y respalda el argumento.",
+    "related_ids": [
+      "IA-244",
+      "IA-245",
+      "IA-246",
+      "IA-458",
+      "IA-419"
+    ]
+  },
+  "IA-437": {
+    "example_en": "A contract reviewer marks proposed changes to the indemnity clause in a comparison document.",
+    "example_es": "Un revisor de contratos marca los cambios propuestos en una cláusula de indemnización.",
+    "related_ids": [
+      "IA-436",
+      "IA-433",
+      "IA-432"
+    ]
+  },
+  "IA-439": {
+    "example_en": "A legal team checks transaction documents for obligations, risks and missing signatures.",
+    "example_es": "Un equipo legal comprueba obligaciones, riesgos y firmas pendientes en la documentación de una operación.",
+    "related_ids": [
+      "IA-440",
+      "IA-441",
+      "IA-443"
+    ]
+  },
+  "IA-458": {
+    "example_en": "An AI-generated legal memo cites a fictitious statute that a human reviewer identifies.",
+    "example_es": "Un memorando jurídico generado con IA cita una norma ficticia que identifica el revisor humano.",
+    "related_ids": [
+      "IA-244",
+      "IA-245",
+      "IA-246",
+      "IA-426"
+    ]
+  },
+  "IA-466": {
+    "example_en": "Before procurement, a team reviews the model card for intended use, evaluations and limitations.",
+    "example_es": "Antes de contratar un modelo, el equipo examina su ficha de uso previsto, evaluaciones y limitaciones.",
+    "related_ids": [
+      "IA-462",
+      "IA-464",
+      "IA-471",
+      "IA-488"
+    ]
+  },
+  "IA-485": {
+    "example_en": "A project team evaluates personal-data processing requirements before uploading user records.",
+    "example_es": "Un equipo evalúa los requisitos de tratamiento de datos personales antes de cargar registros de usuarios.",
+    "related_ids": [
+      "IA-484",
+      "IA-486",
+      "IA-487",
+      "IA-479"
+    ]
+  },
+  "IA-484": {
+    "example_en": "A provider checks the EU AI Act obligations applicable to the intended AI system use case.",
+    "example_es": "Un proveedor comprueba qué obligaciones de la Ley de IA europea se aplican al uso previsto del sistema.",
+    "related_ids": [
+      "IA-485",
+      "IA-486",
+      "IA-487",
+      "IA-479"
+    ]
+  },
+  "IA-488": {
+    "example_en": "A high-impact workflow includes a human approval step before an automated decision takes effect.",
+    "example_es": "Un proceso de alto impacto incorpora aprobación humana antes de que una decisión automatizada surta efecto.",
+    "related_ids": [
+      "IA-462",
+      "IA-464",
+      "IA-466",
+      "IA-471"
+    ]
+  },
+  "IA-136": {
+    "example_en": "A scanned PDF is passed through OCR to turn page images into searchable text.",
+    "example_es": "Un PDF escaneado pasa por OCR para convertir las imágenes de sus páginas en texto buscable.",
+    "related_ids": [
+      "IA-511",
+      "IA-512",
+      "IA-513"
+    ]
+  },
+  "IA-516": {
+    "example_en": "A document processor identifies organization names and dates in a set of contracts.",
+    "example_es": "Un procesador documental identifica nombres de organizaciones y fechas en varios contratos."
+  },
+  "IA-538": {
+    "example_en": "Pilot users check that the glossary search finds Spanish terms by their English equivalents.",
+    "example_es": "Los usuarios piloto comprueban que el buscador encuentra términos españoles usando equivalentes ingleses."
+  },
+  "IA-140": {
+    "related_ids": [
+      "IA-011",
+      "IA-146",
+      "IA-147",
+      "IA-143"
+    ]
+  },
+  "IA-143": {
+    "related_ids": [
+      "IA-011",
+      "IA-146",
+      "IA-147",
+      "IA-140"
+    ]
+  },
+  "IA-229": {
+    "related_ids": [
+      "IA-012",
+      "IA-230",
+      "IA-019",
+      "IA-028"
+    ]
+  },
+  "IA-230": {
+    "related_ids": [
+      "IA-012",
+      "IA-229",
+      "IA-019",
+      "IA-028"
+    ]
+  },
+  "IA-019": {
+    "related_ids": [
+      "IA-012",
+      "IA-229",
+      "IA-230",
+      "IA-028"
+    ]
+  },
+  "IA-028": {
+    "related_ids": [
+      "IA-012",
+      "IA-229",
+      "IA-230",
+      "IA-019"
+    ]
+  },
+  "IA-309": {
+    "related_ids": [
+      "IA-013",
+      "IA-014",
+      "IA-015",
+      "IA-450"
+    ]
+  },
+  "IA-450": {
+    "related_ids": [
+      "IA-013",
+      "IA-014",
+      "IA-015",
+      "IA-309"
+    ]
+  },
+  "IA-033": {
+    "related_ids": [
+      "IA-006",
+      "IA-034",
+      "IA-035",
+      "IA-053",
+      "IA-261"
+    ]
+  },
+  "IA-034": {
+    "related_ids": [
+      "IA-006",
+      "IA-033",
+      "IA-035",
+      "IA-053",
+      "IA-261"
+    ]
+  },
+  "IA-035": {
+    "related_ids": [
+      "IA-006",
+      "IA-033",
+      "IA-034",
+      "IA-053",
+      "IA-261"
+    ]
+  },
+  "IA-053": {
+    "related_ids": [
+      "IA-006",
+      "IA-033",
+      "IA-034",
+      "IA-035",
+      "IA-261"
+    ]
+  },
+  "IA-041": {
+    "related_ids": [
+      "IA-037",
+      "IA-038",
+      "IA-044",
+      "IA-042"
+    ]
+  },
+  "IA-044": {
+    "related_ids": [
+      "IA-037",
+      "IA-038",
+      "IA-041",
+      "IA-042"
+    ]
+  },
+  "IA-042": {
+    "related_ids": [
+      "IA-037",
+      "IA-038",
+      "IA-041",
+      "IA-044"
+    ]
+  },
+  "IA-062": {
+    "related_ids": [
+      "IA-061",
+      "IA-063",
+      "IA-060"
+    ]
+  },
+  "IA-063": {
+    "related_ids": [
+      "IA-061",
+      "IA-062",
+      "IA-060"
+    ]
+  },
+  "IA-060": {
+    "related_ids": [
+      "IA-061",
+      "IA-062",
+      "IA-063"
+    ]
+  },
+  "IA-065": {
+    "related_ids": [
+      "IA-064",
+      "IA-066",
+      "IA-250"
+    ]
+  },
+  "IA-066": {
+    "related_ids": [
+      "IA-064",
+      "IA-065",
+      "IA-250"
+    ]
+  },
+  "IA-250": {
+    "related_ids": [
+      "IA-064",
+      "IA-065",
+      "IA-066"
+    ]
+  },
+  "IA-076": {
+    "related_ids": [
+      "IA-075",
+      "IA-096",
+      "IA-097",
+      "IA-098"
+    ]
+  },
+  "IA-096": {
+    "related_ids": [
+      "IA-075",
+      "IA-076",
+      "IA-097",
+      "IA-098"
+    ]
+  },
+  "IA-097": {
+    "related_ids": [
+      "IA-075",
+      "IA-076",
+      "IA-096",
+      "IA-098"
+    ]
+  },
+  "IA-098": {
+    "related_ids": [
+      "IA-075",
+      "IA-076",
+      "IA-096",
+      "IA-097"
+    ]
+  },
+  "IA-104": {
+    "related_ids": [
+      "IA-103",
+      "IA-127",
+      "IA-128",
+      "IA-105"
+    ]
+  },
+  "IA-128": {
+    "related_ids": [
+      "IA-103",
+      "IA-104",
+      "IA-127",
+      "IA-105"
+    ]
+  },
+  "IA-107": {
+    "related_ids": [
+      "IA-105",
+      "IA-108",
+      "IA-109",
+      "IA-110"
+    ]
+  },
+  "IA-108": {
+    "related_ids": [
+      "IA-105",
+      "IA-107",
+      "IA-109",
+      "IA-110"
+    ]
+  },
+  "IA-109": {
+    "related_ids": [
+      "IA-105",
+      "IA-107",
+      "IA-108",
+      "IA-110"
+    ]
+  },
+  "IA-110": {
+    "related_ids": [
+      "IA-105",
+      "IA-107",
+      "IA-108",
+      "IA-109"
+    ]
+  },
+  "IA-114": {
+    "related_ids": [
+      "IA-115",
+      "IA-116",
+      "IA-117"
+    ]
+  },
+  "IA-116": {
+    "related_ids": [
+      "IA-115",
+      "IA-114",
+      "IA-117"
+    ]
+  },
+  "IA-117": {
+    "related_ids": [
+      "IA-115",
+      "IA-114",
+      "IA-116"
+    ]
+  },
+  "IA-120": {
+    "related_ids": [
+      "IA-119",
+      "IA-112",
+      "IA-111",
+      "IA-113"
+    ]
+  },
+  "IA-112": {
+    "related_ids": [
+      "IA-119",
+      "IA-120",
+      "IA-111",
+      "IA-113"
+    ]
+  },
+  "IA-111": {
+    "related_ids": [
+      "IA-119",
+      "IA-120",
+      "IA-112",
+      "IA-113"
+    ]
+  },
+  "IA-113": {
+    "related_ids": [
+      "IA-119",
+      "IA-120",
+      "IA-112",
+      "IA-111"
+    ]
+  },
+  "IA-138": {
+    "related_ids": [
+      "IA-137",
+      "IA-139",
+      "IA-178",
+      "IA-177"
+    ]
+  },
+  "IA-139": {
+    "related_ids": [
+      "IA-137",
+      "IA-138",
+      "IA-178",
+      "IA-177"
+    ]
+  },
+  "IA-178": {
+    "related_ids": [
+      "IA-137",
+      "IA-138",
+      "IA-139",
+      "IA-177"
+    ]
+  },
+  "IA-177": {
+    "related_ids": [
+      "IA-137",
+      "IA-138",
+      "IA-139",
+      "IA-178"
+    ]
+  },
+  "IA-149": {
+    "related_ids": [
+      "IA-148",
+      "IA-150",
+      "IA-151",
+      "IA-154"
+    ]
+  },
+  "IA-150": {
+    "related_ids": [
+      "IA-148",
+      "IA-149",
+      "IA-151",
+      "IA-154"
+    ]
+  },
+  "IA-151": {
+    "related_ids": [
+      "IA-148",
+      "IA-149",
+      "IA-150",
+      "IA-154"
+    ]
+  },
+  "IA-154": {
+    "related_ids": [
+      "IA-148",
+      "IA-149",
+      "IA-150",
+      "IA-151",
+      "IA-153"
+    ]
+  },
+  "IA-155": {
+    "related_ids": [
+      "IA-153",
+      "IA-154",
+      "IA-156",
+      "IA-157"
+    ]
+  },
+  "IA-156": {
+    "related_ids": [
+      "IA-153",
+      "IA-154",
+      "IA-155",
+      "IA-157"
+    ]
+  },
+  "IA-157": {
+    "related_ids": [
+      "IA-153",
+      "IA-154",
+      "IA-155",
+      "IA-156"
+    ]
+  },
+  "IA-188": {
+    "related_ids": [
+      "IA-191",
+      "IA-189",
+      "IA-190",
+      "IA-192"
+    ]
+  },
+  "IA-189": {
+    "related_ids": [
+      "IA-191",
+      "IA-188",
+      "IA-190",
+      "IA-192"
+    ]
+  },
+  "IA-192": {
+    "related_ids": [
+      "IA-191",
+      "IA-188",
+      "IA-189",
+      "IA-190"
+    ]
+  },
+  "IA-207": {
+    "related_ids": [
+      "IA-208",
+      "IA-209",
+      "IA-228",
+      "IA-226"
+    ]
+  },
+  "IA-208": {
+    "related_ids": [
+      "IA-207",
+      "IA-209",
+      "IA-228",
+      "IA-226"
+    ]
+  },
+  "IA-209": {
+    "related_ids": [
+      "IA-207",
+      "IA-208",
+      "IA-228",
+      "IA-226"
+    ]
+  },
+  "IA-226": {
+    "related_ids": [
+      "IA-207",
+      "IA-208",
+      "IA-209",
+      "IA-228"
+    ]
+  },
+  "IA-212": {
+    "related_ids": [
+      "IA-211",
+      "IA-213",
+      "IA-214"
+    ]
+  },
+  "IA-213": {
+    "related_ids": [
+      "IA-211",
+      "IA-212",
+      "IA-214"
+    ]
+  },
+  "IA-214": {
+    "related_ids": [
+      "IA-211",
+      "IA-212",
+      "IA-213"
+    ]
+  },
+  "IA-234": {
+    "related_ids": [
+      "IA-233",
+      "IA-236",
+      "IA-221",
+      "IA-223"
+    ]
+  },
+  "IA-236": {
+    "related_ids": [
+      "IA-233",
+      "IA-234",
+      "IA-221",
+      "IA-223"
+    ]
+  },
+  "IA-221": {
+    "related_ids": [
+      "IA-233",
+      "IA-234",
+      "IA-236",
+      "IA-223"
+    ]
+  },
+  "IA-223": {
+    "related_ids": [
+      "IA-233",
+      "IA-234",
+      "IA-236",
+      "IA-221"
+    ]
+  },
+  "IA-245": {
+    "related_ids": [
+      "IA-244",
+      "IA-246",
+      "IA-458",
+      "IA-426"
+    ]
+  },
+  "IA-246": {
+    "related_ids": [
+      "IA-244",
+      "IA-245",
+      "IA-458",
+      "IA-426"
+    ]
+  },
+  "IA-262": {
+    "related_ids": [
+      "IA-261",
+      "IA-263",
+      "IA-284"
+    ]
+  },
+  "IA-263": {
+    "related_ids": [
+      "IA-261",
+      "IA-262",
+      "IA-284"
+    ]
+  },
+  "IA-284": {
+    "related_ids": [
+      "IA-261",
+      "IA-262",
+      "IA-263"
+    ]
+  },
+  "IA-265": {
+    "related_ids": [
+      "IA-266",
+      "IA-267",
+      "IA-271"
+    ]
+  },
+  "IA-266": {
+    "related_ids": [
+      "IA-265",
+      "IA-267",
+      "IA-271"
+    ]
+  },
+  "IA-271": {
+    "related_ids": [
+      "IA-265",
+      "IA-266",
+      "IA-267"
+    ]
+  },
+  "IA-314": {
+    "related_ids": [
+      "IA-313",
+      "IA-315",
+      "IA-335",
+      "IA-327"
+    ]
+  },
+  "IA-315": {
+    "related_ids": [
+      "IA-313",
+      "IA-314",
+      "IA-335",
+      "IA-327"
+    ]
+  },
+  "IA-335": {
+    "related_ids": [
+      "IA-313",
+      "IA-314",
+      "IA-315",
+      "IA-327"
+    ]
+  },
+  "IA-327": {
+    "related_ids": [
+      "IA-313",
+      "IA-314",
+      "IA-315",
+      "IA-335"
+    ]
+  },
+  "IA-322": {
+    "related_ids": [
+      "IA-321",
+      "IA-323",
+      "IA-326",
+      "IA-325"
+    ]
+  },
+  "IA-323": {
+    "related_ids": [
+      "IA-321",
+      "IA-322",
+      "IA-326",
+      "IA-325"
+    ]
+  },
+  "IA-326": {
+    "related_ids": [
+      "IA-321",
+      "IA-322",
+      "IA-323",
+      "IA-325"
+    ]
+  },
+  "IA-325": {
+    "related_ids": [
+      "IA-321",
+      "IA-322",
+      "IA-323",
+      "IA-326"
+    ]
+  },
+  "IA-350": {
+    "related_ids": [
+      "IA-349",
+      "IA-351",
+      "IA-352"
+    ]
+  },
+  "IA-351": {
+    "related_ids": [
+      "IA-349",
+      "IA-350",
+      "IA-352"
+    ]
+  },
+  "IA-352": {
+    "related_ids": [
+      "IA-349",
+      "IA-350",
+      "IA-351"
+    ]
+  },
+  "IA-369": {
+    "related_ids": [
+      "IA-394",
+      "IA-392",
+      "IA-393",
+      "IA-418"
+    ]
+  },
+  "IA-392": {
+    "related_ids": [
+      "IA-394",
+      "IA-369",
+      "IA-393",
+      "IA-418"
+    ]
+  },
+  "IA-393": {
+    "related_ids": [
+      "IA-394",
+      "IA-369",
+      "IA-392",
+      "IA-418"
+    ]
+  },
+  "IA-418": {
+    "related_ids": [
+      "IA-394",
+      "IA-369",
+      "IA-392",
+      "IA-393"
+    ]
+  },
+  "IA-376": {
+    "related_ids": [
+      "IA-375",
+      "IA-377",
+      "IA-378"
+    ]
+  },
+  "IA-377": {
+    "related_ids": [
+      "IA-375",
+      "IA-376",
+      "IA-378"
+    ]
+  },
+  "IA-378": {
+    "related_ids": [
+      "IA-375",
+      "IA-376",
+      "IA-377"
+    ]
+  },
+  "IA-399": {
+    "related_ids": [
+      "IA-398",
+      "IA-416",
+      "IA-395"
+    ]
+  },
+  "IA-416": {
+    "related_ids": [
+      "IA-398",
+      "IA-399",
+      "IA-395"
+    ]
+  },
+  "IA-395": {
+    "related_ids": [
+      "IA-398",
+      "IA-399",
+      "IA-416"
+    ]
+  },
+  "IA-420": {
+    "related_ids": [
+      "IA-419",
+      "IA-425",
+      "IA-426",
+      "IA-428"
+    ]
+  },
+  "IA-425": {
+    "related_ids": [
+      "IA-419",
+      "IA-420",
+      "IA-426",
+      "IA-428"
+    ]
+  },
+  "IA-428": {
+    "related_ids": [
+      "IA-419",
+      "IA-420",
+      "IA-425",
+      "IA-426"
+    ]
+  },
+  "IA-436": {
+    "related_ids": [
+      "IA-437",
+      "IA-433",
+      "IA-432"
+    ]
+  },
+  "IA-433": {
+    "related_ids": [
+      "IA-437",
+      "IA-436",
+      "IA-432"
+    ]
+  },
+  "IA-432": {
+    "related_ids": [
+      "IA-437",
+      "IA-436",
+      "IA-433"
+    ]
+  },
+  "IA-440": {
+    "related_ids": [
+      "IA-439",
+      "IA-441",
+      "IA-443"
+    ]
+  },
+  "IA-441": {
+    "related_ids": [
+      "IA-439",
+      "IA-440",
+      "IA-443"
+    ]
+  },
+  "IA-443": {
+    "related_ids": [
+      "IA-439",
+      "IA-440",
+      "IA-441"
+    ]
+  },
+  "IA-462": {
+    "related_ids": [
+      "IA-464",
+      "IA-466",
+      "IA-471",
+      "IA-488"
+    ]
+  },
+  "IA-464": {
+    "related_ids": [
+      "IA-462",
+      "IA-466",
+      "IA-471",
+      "IA-488"
+    ]
+  },
+  "IA-471": {
+    "related_ids": [
+      "IA-462",
+      "IA-464",
+      "IA-466",
+      "IA-488"
+    ]
+  },
+  "IA-486": {
+    "related_ids": [
+      "IA-484",
+      "IA-485",
+      "IA-487",
+      "IA-479"
+    ]
+  },
+  "IA-487": {
+    "related_ids": [
+      "IA-484",
+      "IA-485",
+      "IA-486",
+      "IA-479"
+    ]
+  },
+  "IA-479": {
+    "related_ids": [
+      "IA-484",
+      "IA-485",
+      "IA-486",
+      "IA-487"
+    ]
+  },
+  "IA-511": {
+    "related_ids": [
+      "IA-512",
+      "IA-136",
+      "IA-513"
+    ]
+  },
+  "IA-512": {
+    "related_ids": [
+      "IA-511",
+      "IA-136",
+      "IA-513"
+    ]
+  },
+  "IA-513": {
+    "related_ids": [
+      "IA-511",
+      "IA-512",
+      "IA-136"
+    ]
+  },
+  "IA-505": {
+    "related_ids": [
+      "IA-507",
+      "IA-521",
+      "IA-508"
+    ]
+  },
+  "IA-507": {
+    "related_ids": [
+      "IA-505",
+      "IA-521",
+      "IA-508"
+    ]
+  },
+  "IA-521": {
+    "related_ids": [
+      "IA-505",
+      "IA-507",
+      "IA-508"
+    ]
+  },
+  "IA-508": {
+    "related_ids": [
+      "IA-505",
+      "IA-507",
+      "IA-521"
+    ]
+  },
+  "IA-528": {
+    "related_ids": [
+      "IA-527",
+      "IA-530",
+      "IA-529"
+    ]
+  },
+  "IA-527": {
+    "related_ids": [
+      "IA-528",
+      "IA-530",
+      "IA-529"
+    ]
+  },
+  "IA-530": {
+    "related_ids": [
+      "IA-528",
+      "IA-527",
+      "IA-529"
+    ]
+  },
+  "IA-529": {
+    "related_ids": [
+      "IA-528",
+      "IA-527",
+      "IA-530"
+    ]
+  },
+  "IA-004": {
+    "aliases": [
+      "LLM",
+      "large language model"
+    ]
+  }
+}
