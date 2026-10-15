@@ -79,8 +79,8 @@
     ]
   },
   "IA-038": {
-    "example_en": "A long conversation is summarized before it exceeds the model’s available context window.",
-    "example_es": "Se resume una conversación extensa antes de superar la ventana de contexto disponible.",
+    "example_en": "A request uses 12,000 input tokens and reserves room for the model’s response within the context limit.",
+    "example_es": "Una solicitud utiliza 12.000 tokens de entrada y reserva espacio para la respuesta dentro del límite de contexto.",
     "related_ids": [
       "IA-037",
       "IA-041",
@@ -125,8 +125,8 @@
     "example_es": "Un equipo de despliegue reduce la precisión de los pesos del modelo para disminuir el uso de memoria."
   },
   "IA-103": {
-    "example_en": "An internal chatbot retrieves the latest company policy before drafting an answer with citations.",
-    "example_es": "Un chatbot interno recupera la política vigente de la empresa antes de responder con citas.",
+    "example_en": "Before answering a maintenance question, the assistant retrieves the latest approved procedure from a document index.",
+    "example_es": "Antes de responder sobre mantenimiento, el asistente recupera el último procedimiento aprobado de un índice documental.",
     "related_ids": [
       "IA-104",
       "IA-127",
@@ -168,13 +168,14 @@
     ]
   },
   "IA-127": {
-    "example_en": "An assistant answers a regulatory question using passages from the actual regulation.",
-    "example_es": "Un asistente responde una pregunta normativa basándose en fragmentos del reglamento original.",
+    "example_en": "A summary quotes only requirements supported by the approved technical specification.",
+    "example_es": "Un resumen cita solo requisitos respaldados por la especificación técnica aprobada.",
     "related_ids": [
       "IA-103",
       "IA-104",
       "IA-128",
-      "IA-105"
+      "IA-105",
+      "IA-246"
     ]
   },
   "IA-137": {
@@ -218,8 +219,8 @@
     ]
   },
   "IA-153": {
-    "example_en": "A coding assistant connects to a tool server through MCP to inspect project documentation.",
-    "example_es": "Un asistente de programación se conecta a un servidor de herramientas mediante MCP para consultar documentación.",
+    "example_en": "An IDE uses an MCP client to connect its assistant to a repository-reading MCP server.",
+    "example_es": "Un IDE utiliza un cliente MCP para conectar su asistente a un servidor MCP de lectura de repositorios.",
     "related_ids": [
       "IA-154",
       "IA-155",
@@ -227,12 +228,18 @@
       "IA-157"
     ],
     "aliases": [
-      "MCP"
+      "MCP",
+      "Model Context Protocol"
     ]
   },
   "IA-170": {
-    "example_en": "A policy check blocks an agent from sending an email with confidential content without approval.",
-    "example_es": "Una salvaguarda bloquea el envío automático de un correo confidencial sin aprobación."
+    "example_en": "A payment tool requires explicit user approval even when the agent recommends executing the transfer.",
+    "example_es": "Una herramienta de pagos exige aprobación explícita aunque el agente recomiende ejecutar la transferencia.",
+    "related_ids": [
+      "IA-169",
+      "IA-272",
+      "IA-283"
+    ]
   },
   "IA-191": {
     "example_en": "A developer reviews an AI-generated patch for correctness, readability and test coverage.",
@@ -274,8 +281,8 @@
     ]
   },
   "IA-244": {
-    "example_en": "An assistant invents a nonexistent court ruling; citation verification catches the mistake.",
-    "example_es": "Un asistente inventa una sentencia inexistente y la verificación de citas detecta el error.",
+    "example_en": "An assistant invents a court ruling and quotes it as if the citation existed.",
+    "example_es": "Un asistente inventa una sentencia y la cita como si existiera.",
     "related_ids": [
       "IA-245",
       "IA-246",
@@ -294,14 +301,17 @@
     ]
   },
   "IA-261": {
-    "example_en": "A retrieved webpage tries to make a research agent ignore the user’s instructions.",
-    "example_es": "Una página recuperada intenta que un agente investigador ignore las instrucciones del usuario.",
+    "example_en": "A malicious user writes a prompt designed to override the assistant’s permitted behavior.",
+    "example_es": "Un usuario malicioso redacta una instrucción para intentar anular las restricciones del asistente.",
     "related_ids": [
       "IA-006",
       "IA-033",
       "IA-034",
       "IA-035",
-      "IA-053"
+      "IA-053",
+      "IA-262",
+      "IA-263",
+      "IA-291"
     ]
   },
   "IA-267": {
@@ -434,23 +444,36 @@
     ]
   },
   "IA-485": {
-    "example_en": "A project team evaluates personal-data processing requirements before uploading user records.",
-    "example_es": "Un equipo evalúa los requisitos de tratamiento de datos personales antes de cargar registros de usuarios.",
+    "example_en": "Before using personal data to fine-tune a model, the team evaluates its lawful basis and GDPR obligations.",
+    "example_es": "Antes de ajustar un modelo con datos personales, el equipo comprueba su base jurídica y sus obligaciones conforme al RGPD.",
     "related_ids": [
       "IA-484",
       "IA-486",
       "IA-487",
-      "IA-479"
+      "IA-479",
+      "IA-470",
+      "IA-271",
+      "IA-269"
+    ],
+    "aliases": [
+      "GDPR",
+      "RGPD"
     ]
   },
   "IA-484": {
-    "example_en": "A provider checks the EU AI Act obligations applicable to the intended AI system use case.",
-    "example_es": "Un proveedor comprueba qué obligaciones de la Ley de IA europea se aplican al uso previsto del sistema.",
+    "example_en": "A provider maps an AI system’s intended use to the EU AI Act before identifying which obligations apply and when.",
+    "example_es": "Un proveedor clasifica el uso previsto de un sistema conforme al AI Act antes de determinar qué obligaciones le corresponden y desde cuándo.",
     "related_ids": [
       "IA-485",
       "IA-486",
       "IA-487",
-      "IA-479"
+      "IA-479",
+      "IA-488",
+      "IA-495"
+    ],
+    "aliases": [
+      "EU AI Act",
+      "Regulation (EU) 2024/1689"
     ]
   },
   "IA-488": {
@@ -578,7 +601,9 @@
       "IA-034",
       "IA-035",
       "IA-261"
-    ]
+    ],
+    "example_en": "A retrieved webpage says “ignore previous instructions”, but the system’s higher-priority instructions still govern the assistant.",
+    "example_es": "Una web recuperada dice «ignora instrucciones anteriores», pero las instrucciones de mayor prioridad siguen rigiendo al asistente."
   },
   "IA-041": {
     "related_ids": [
@@ -608,15 +633,21 @@
     "related_ids": [
       "IA-061",
       "IA-063",
-      "IA-060"
-    ]
+      "IA-060",
+      "IA-286"
+    ],
+    "example_en": "The model returns valid JSON, but a required invoice_number key is absent; JSON mode alone does not ensure that key.",
+    "example_es": "El modelo devuelve JSON válido, pero falta la clave obligatoria invoice_number; el modo JSON no garantiza su presencia."
   },
   "IA-063": {
     "related_ids": [
       "IA-061",
       "IA-062",
-      "IA-060"
-    ]
+      "IA-060",
+      "IA-311"
+    ],
+    "example_en": "The API restricts extraction to an object with invoice_number, date and amount according to a schema.",
+    "example_es": "La API limita la extracción a un objeto con invoice_number, date y amount según un esquema."
   },
   "IA-060": {
     "related_ids": [
@@ -630,7 +661,9 @@
       "IA-064",
       "IA-066",
       "IA-250"
-    ]
+    ],
+    "example_en": "The developer lowers top-p to restrict sampling to a smaller cumulative-probability set.",
+    "example_es": "El desarrollador reduce top-p para limitar el muestreo a un conjunto menor de probabilidad acumulada."
   },
   "IA-066": {
     "related_ids": [
@@ -841,8 +874,12 @@
       "IA-149",
       "IA-150",
       "IA-151",
-      "IA-153"
-    ]
+      "IA-153",
+      "IA-155",
+      "IA-156"
+    ],
+    "example_en": "An MCP server exposes a read_file tool and a project_document resource to authorized clients.",
+    "example_es": "Un servidor MCP ofrece la herramienta read_file y un recurso project_document a clientes autorizados."
   },
   "IA-155": {
     "related_ids": [
@@ -850,7 +887,9 @@
       "IA-154",
       "IA-156",
       "IA-157"
-    ]
+    ],
+    "example_en": "The desktop assistant creates an MCP client connection for each configured MCP server.",
+    "example_es": "El asistente de escritorio establece una conexión de cliente MCP por cada servidor MCP configurado."
   },
   "IA-156": {
     "related_ids": [
@@ -866,7 +905,9 @@
       "IA-154",
       "IA-155",
       "IA-156"
-    ]
+    ],
+    "example_en": "A repository MCP server lists a reusable “summarize pull request” prompt for the client to present.",
+    "example_es": "Un servidor MCP para repositorios publica una plantilla «resumir pull request» que el cliente puede mostrar."
   },
   "IA-188": {
     "related_ids": [
@@ -890,7 +931,9 @@
       "IA-188",
       "IA-189",
       "IA-190"
-    ]
+    ],
+    "example_en": "The assistant extracts duplicated parsing code into one function without changing the returned results.",
+    "example_es": "El asistente concentra código de análisis duplicado en una función sin alterar los resultados."
   },
   "IA-207": {
     "related_ids": [
@@ -990,14 +1033,23 @@
       "IA-244",
       "IA-245",
       "IA-458",
-      "IA-426"
-    ]
+      "IA-426",
+      "IA-127"
+    ],
+    "example_en": "A RAG answer may follow its retrieved document faithfully even when that document contains outdated figures.",
+    "example_es": "Una respuesta RAG puede reflejar fielmente un documento recuperado aunque este contenga cifras desactualizadas."
   },
   "IA-262": {
     "related_ids": [
       "IA-261",
       "IA-263",
-      "IA-284"
+      "IA-284",
+      "IA-291"
+    ],
+    "example_en": "A retrieved web page contains instructions to email private records; the assistant must treat those instructions as untrusted content.",
+    "example_es": "Una página recuperada contiene órdenes de enviar registros privados por correo; el asistente debe tratarlas como contenido no fiable.",
+    "aliases": [
+      "indirect injection"
     ]
   },
   "IA-263": {
@@ -1012,7 +1064,9 @@
       "IA-261",
       "IA-262",
       "IA-263"
-    ]
+    ],
+    "example_en": "Tool-returned webpage text is displayed as a citation, not inserted as higher-priority operating instructions.",
+    "example_es": "El texto que devuelve una herramienta web se muestra como cita, no como instrucciones operativas de mayor prioridad."
   },
   "IA-265": {
     "related_ids": [
@@ -1215,8 +1269,12 @@
       "IA-419",
       "IA-420",
       "IA-425",
-      "IA-426"
-    ]
+      "IA-426",
+      "IA-429",
+      "IA-427"
+    ],
+    "example_en": "Before relying on a US precedent, the lawyer checks whether later cases have overruled its holding.",
+    "example_es": "Antes de apoyar un argumento en un precedente de EE. UU., el abogado verifica si resoluciones posteriores lo han revocado."
   },
   "IA-436": {
     "related_ids": [
@@ -1251,7 +1309,9 @@
       "IA-439",
       "IA-440",
       "IA-443"
-    ]
+    ],
+    "example_en": "During litigation, the team preserves relevant emails and reviews them under an agreed e-discovery protocol.",
+    "example_es": "Durante un litigio, el equipo conserva correos relevantes y los examina según un protocolo de e-discovery acordado."
   },
   "IA-443": {
     "related_ids": [
@@ -1297,8 +1357,13 @@
       "IA-484",
       "IA-485",
       "IA-486",
-      "IA-479"
-    ]
+      "IA-479",
+      "IA-464",
+      "IA-465",
+      "IA-462"
+    ],
+    "example_en": "An organization uses NIST AI RMF to identify AI risks and document how they are monitored and managed.",
+    "example_es": "Una organización utiliza NIST AI RMF para identificar riesgos de IA y documentar su seguimiento y gestión."
   },
   "IA-479": {
     "related_ids": [
@@ -1389,6 +1454,155 @@
     "aliases": [
       "LLM",
       "large language model"
+    ],
+    "example_en": "An LLM summarizes a 40-page engineering specification and answers questions about its sections.",
+    "example_es": "Un LLM resume una especificación de ingeniería de 40 páginas y responde preguntas sobre sus secciones."
+  },
+  "IA-001": {
+    "example_en": "A company uses speech recognition to transcribe support calls and identify recurring requests.",
+    "example_es": "Una empresa emplea reconocimiento de voz para transcribir llamadas de soporte e identificar consultas repetidas."
+  },
+  "IA-003": {
+    "example_en": "A foundation model is adapted to summarize inspection records in different departments.",
+    "example_es": "Un modelo fundacional se adapta para resumir registros de inspección en distintos departamentos."
+  },
+  "IA-008": {
+    "example_en": "The coding agent produces a patch and a test report as two reviewable artifacts.",
+    "example_es": "El agente de programación entrega un parche y un informe de pruebas como dos artefactos revisables."
+  },
+  "IA-010": {
+    "example_en": "A pipeline reads PDF files, extracts sections, checks citations and exports a report.",
+    "example_es": "Un pipeline lee PDF, extrae secciones, comprueba citas y exporta un informe."
+  },
+  "IA-016": {
+    "example_en": "Experts label 100 clauses before using those labels to evaluate an extraction model.",
+    "example_es": "Especialistas etiquetan 100 cláusulas antes de usar esas etiquetas para evaluar un modelo de extracción."
+  },
+  "IA-017": {
+    "example_en": "The signed specification is chosen as the source of truth, rather than an obsolete email draft.",
+    "example_es": "Se establece la especificación firmada como fuente de referencia en lugar de un borrador antiguo de correo."
+  },
+  "IA-039": {
+    "example_en": "The tokenizer splits an uncommon technical identifier into several tokens.",
+    "example_es": "El tokenizador divide un identificador técnico poco habitual en varios tokens."
+  },
+  "IA-079": {
+    "example_en": "Annotators compare two assistant answers; their preferences inform the reward signal used in RLHF.",
+    "example_es": "Personas evaluadoras comparan dos respuestas y sus preferencias alimentan la señal de recompensa utilizada en RLHF.",
+    "related_ids": [
+      "IA-080",
+      "IA-081",
+      "IA-082"
+    ],
+    "aliases": [
+      "reinforcement learning from human feedback"
     ]
+  },
+  "IA-080": {
+    "example_en": "A separate AI evaluator ranks alternative completions used during preference optimization.",
+    "example_es": "Un evaluador de IA independiente ordena respuestas alternativas empleadas para optimizar preferencias.",
+    "related_ids": [
+      "IA-079",
+      "IA-081"
+    ]
+  },
+  "IA-081": {
+    "example_en": "DPO adjusts a model using pairs of preferred and rejected answers from a curated dataset.",
+    "example_es": "DPO ajusta el modelo con pares de respuestas preferidas y rechazadas de un conjunto revisado.",
+    "related_ids": [
+      "IA-079",
+      "IA-080"
+    ]
+  },
+  "IA-158": {
+    "example_en": "Two independent vendor agents exchange task updates over A2A without sharing their private tools.",
+    "example_es": "Dos agentes de proveedores distintos intercambian estados de una tarea mediante A2A sin compartir sus herramientas privadas.",
+    "related_ids": [
+      "IA-141",
+      "IA-147",
+      "IA-153"
+    ],
+    "aliases": [
+      "A2A",
+      "Agent2Agent"
+    ]
+  },
+  "IA-219": {
+    "example_en": "A developer describes a dashboard in natural language and iterates on AI-generated code, then verifies it with tests.",
+    "example_es": "Una persona describe un panel en lenguaje natural e itera con código generado por IA; después lo verifica con pruebas."
+  },
+  "IA-239": {
+    "example_en": "For 100 labeled classification examples, 88 correct predictions give 88% accuracy.",
+    "example_es": "Para 100 ejemplos etiquetados de clasificación, 88 predicciones correctas producen una exactitud del 88 %.",
+    "related_ids": [
+      "IA-240",
+      "IA-241",
+      "IA-242"
+    ]
+  },
+  "IA-240": {
+    "example_en": "Of 20 documents marked confidential, 18 really are; precision is 18/20.",
+    "example_es": "De 20 documentos marcados como confidenciales, 18 lo son realmente; la precisión es 18/20."
+  },
+  "IA-241": {
+    "example_en": "Of 25 truly confidential documents, the classifier detects 18; recall is 18/25.",
+    "example_es": "De 25 documentos realmente confidenciales, el clasificador detecta 18; la exhaustividad es 18/25."
+  },
+  "IA-268": {
+    "example_en": "A US medical provider treats a patient’s identifiable lab result as PHI under HIPAA.",
+    "example_es": "Un prestador sanitario estadounidense trata el resultado identificable de un análisis de un paciente como PHI bajo HIPAA."
+  },
+  "IA-283": {
+    "example_en": "A reading-only assistant should not receive a tool that can delete all files in a shared drive.",
+    "example_es": "Un asistente diseñado solo para leer no debería disponer de una herramienta capaz de borrar todos los archivos de una unidad compartida.",
+    "related_ids": [
+      "IA-272",
+      "IA-170",
+      "IA-275"
+    ]
+  },
+  "IA-373": {
+    "example_en": "An SRS for a factory control system describes operating modes, interfaces and safety constraints.",
+    "example_es": "Una SRS de un sistema de control industrial define modos de operación, interfaces y restricciones de seguridad.",
+    "related_ids": [
+      "IA-374",
+      "IA-394",
+      "IA-369"
+    ]
+  },
+  "IA-374": {
+    "example_en": "The software SRS specifies API responses, error handling and access-control behavior for the application.",
+    "example_es": "La SRS de software especifica respuestas de API, gestión de errores y control de acceso de la aplicación.",
+    "related_ids": [
+      "IA-373",
+      "IA-394",
+      "IA-369"
+    ]
+  },
+  "IA-429": {
+    "example_en": "A lawyer runs a KeyCite report on a cited judgment to inspect negative subsequent treatment.",
+    "example_es": "Un abogado consulta KeyCite para comprobar si una sentencia citada ha recibido un tratamiento posterior desfavorable.",
+    "related_ids": [
+      "IA-428",
+      "IA-425",
+      "IA-426"
+    ]
+  },
+  "IA-444": {
+    "example_en": "A legal team checks which lawyer–client emails qualify for privilege under the relevant jurisdiction’s rules.",
+    "example_es": "Un equipo jurídico comprueba qué correos abogado-cliente están protegidos según las reglas de la jurisdicción aplicable.",
+    "related_ids": [
+      "IA-445",
+      "IA-443",
+      "IA-447"
+    ]
+  },
+  "IA-452": {
+    "example_en": "The litigation team produces discoverable records as required by the applicable court rules.",
+    "example_es": "El equipo procesal aporta los registros exigidos según las normas del tribunal competente."
+  },
+  "IA-541": {
+    "example_en": "A reviewer accepts a fluent AI legal summary despite contradictory passages in the attached judgment.",
+    "example_es": "Un revisor acepta un resumen jurídico fluido de IA pese a que la sentencia adjunta contiene pasajes contradictorios."
   }
 }
