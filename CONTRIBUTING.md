@@ -17,3 +17,5 @@ For a Pull Request:
 **Editorial rules:** Cite reliable references when available; explain terms in your own words, avoid reproducing copyrighted definitions, and distinguish legal/jurisdictional meanings where applicable. Write understandable and specific examples. Do not submit proprietary or confidential material. Relations should only point to genuinely relevant existing terms.
 
 **Security:** Do not include credentials, access tokens or sensitive personal data in issues or PRs. Proposed changes are only published after review and merge into `main`.
+
+**Canonical terminology:** English term names are the primary heading on *both* English and Spanish pages, and both alphabetical lists sort by English name. The Spanish name is an additional translation, not a replacement for the English name.
