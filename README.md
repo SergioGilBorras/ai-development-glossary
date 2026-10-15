@@ -8,7 +8,7 @@
 
 ## Features / Funcionalidades
 
-- 542 initial terms across 15 categories, ordered alphabetically in each language.
+- 542 initial terms across 15 categories. **English is the canonical term in both language versions**. Both indexes are alphabetized by English name, and the Spanish page displays the Spanish equivalent beneath each English title.
 - Search in **both languages** at once, across term names, definitions and aliases; search also works without accents.
 - Category dropdown filters the search; clear filters and A–Z navigation.
 - Individual, shareable, indexable detail pages in `/en/term/<slug>/` and `/es/term/<slug>/`.
@@ -27,7 +27,7 @@ In the GitHub repository, go to **Settings → Pages → Build and deployment �
 
 `ID`, `Categoría`, `Term (EN)`, `Término (ES)`, `Meaning (EN)`, `Significado (ES)`.
 
-`Referencia (URL)` is optional. Use a **unique ID** (`IA-543`, etc.), and an existing Spanish category spelled exactly as in the CSV. English term names should be unique, since they determine stable URL slugs. Keep descriptions concise, technically accurate and original. A Spanish equivalent is required in the published CSV even if a GitHub suggestion comes in one language; maintainers can complete it.
+`Referencia (URL)` is optional. Use a **unique ID** (`IA-543`, etc.), and an existing Spanish category spelled exactly as in the CSV. English term names are the canonical display names in **both** languages and must be unique, since they determine stable URL slugs and alphabetical order. Keep descriptions concise, technically accurate and original. A Spanish equivalent is required in the published CSV even if a GitHub suggestion comes in one language; maintainers can complete it.
 
 **Optional enrichment:** [`data/enrichments.json`](data/enrichments.json), indexed by the same stable ID:
 
@@ -69,7 +69,7 @@ All proposals are reviewed by a maintainer. Issues are public: don't include con
 
 ## Editorial notes / Criterios editoriales
 
-The initial 542 entries have been checked automatically for required bilingual fields, duplicate English names and IDs, link structure and safe external URL schemes. Core entries received specifically written use-case examples; generic category-context examples remain for terms pending deeper editorial review. **Do not treat the glossary as a legal opinion, engineering sign-off or authoritative source of regulatory requirements.** Follow source links and verify professional use against applicable norms and jurisdiction.
+The initial 542 entries have been checked automatically for required bilingual fields, duplicate English names and IDs, link structure and safe external URL schemes. A targeted editorial pass revised 46 bilingual definitions and contributed 47 specifically written bilingual usage examples (90 curated examples in total). Remaining entries retain category-context examples pending a deeper editorial review. Selected references, aliases and related-term links were updated. The 542 entries have **not** all been individually verified against primary technical or legal sources. **Do not treat the glossary as a legal opinion, engineering sign-off or authoritative source of regulatory requirements.** Follow source links and verify professional use against applicable norms and jurisdiction.
 
 ## Licensing / Licencias
 
