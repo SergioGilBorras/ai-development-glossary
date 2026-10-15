@@ -121,17 +121,18 @@ def footer(lang):
     return f'''<footer class="footer"><div class="wrap foot-grid"><div><div class="footer-brand">AI<span>.</span> Development Glossary</div><p>{esc(t['tag'])} · EN / ES</p></div><div class="footer-links"><a href="{REPO}" target="_blank" rel="noopener noreferrer">{esc(t['github'])} ↗</a><a href="{issue_url('new')}" target="_blank" rel="noopener noreferrer">{esc(t['suggest'])} ↗</a><a href="{BASE}data/glossary.csv" download>CSV ↓</a><a href="{BASE}data/glossary.json" download>JSON ↓</a></div></div></footer><script src="{BASE}assets/site.js" defer></script></body></html>'''
 def entry_list(lang,terms):
     sections=defaultdict(list)
-    for t in sorted(terms,key=lambda r: unicodedata.normalize('NFKD',r['term_es' if lang=='es' else 'term_en']).casefold()):
-        title=t['term_es' if lang=='es' else 'term_en']; letter=slugify(title)[:1].upper()
+    for t in sorted(terms,key=lambda r: unicodedata.normalize('NFKD',r['term_en']).casefold()):
+        title=t['term_en']; letter=slugify(title)[:1].upper()
         if not letter.isalpha():letter='#'
         sections[letter].append(t)
     out=[]
     for letter in sorted(sections):
         rows=[]
         for t in sections[letter]:
-            title=t['term_es' if lang=='es' else 'term_en']; gloss=t['definition_es' if lang=='es' else 'definition_en']
+            title=t['term_en']; gloss=t['definition_es' if lang=='es' else 'definition_en']
             cat=t['category_es' if lang=='es' else 'category_en']
-            rows.append(f'''<article class="term-row" data-id="{esc(t['id'])}" data-category="{esc(t['category'])}"><div class="term-body"><a class="term-name" href="{a_link(lang,t['slug'])}">{esc(title)} <span aria-hidden="true">↗</span></a><p>{esc(gloss)}</p></div><span class="term-tag">{esc(cat)}</span></article>''')
+            translation=f'<span class="term-translation" lang="es">{esc(t["term_es"])}</span>' if lang=='es' else ''
+            rows.append(f'''<article class="term-row" data-id="{esc(t['id'])}" data-category="{esc(t['category'])}"><div class="term-body"><a class="term-name" href="{a_link(lang,t['slug'])}">{esc(title)} <span aria-hidden="true">↗</span></a>{translation}<p>{esc(gloss)}</p></div><span class="term-tag">{esc(cat)}</span></article>''')
         out.append(f'''<section class="letter-block" id="letter-{letter}" data-letter="{letter}"><h2 class="letter-title">{letter}</h2><div class="term-rows">{''.join(rows)}</div></section>''')
     return ''.join(out)
 def landing(lang, terms):
@@ -144,22 +145,23 @@ def landing(lang, terms):
     return head(lang,title,desc,SITE+lang+'/', SITE+('en' if lang=='es' else 'es')+'/')+navbar(lang)+f'''<main id="main"><div class="hero-outer"><section class="wrap hero"><div class="eyebrow"><span class="eyebrow-line"></span>{esc(t['tag'])}</div><h1>{esc(t['hero'])}</h1><p>{esc(t['sub'])}</p><div class="hero-stats"><span><b>{len(terms)}</b> {esc(t['result'])}</span><i></i><span><b>{len(CATS)}</b> {'categories' if lang=='en' else 'categorías'}</span><i></i><span><b>02</b> {'languages' if lang=='en' else 'idiomas'}</span></div><a class="jump" href="#glossary">{esc(t['browse'])} ↓</a></section></div><section class="wrap catalog" id="glossary" aria-labelledby="catalog-title"><div class="catalog-heading"><div><div class="section-kicker">01 / {'GLOSSARY' if lang=='en' else 'GLOSARIO'}</div><h2 id="catalog-title">{esc(t['allalpha'])}</h2></div><p>{esc(t['intro'])}</p></div><div class="filters"><label class="search-label"><span class="field-title">{'SEARCH' if lang=='en' else 'BUSCAR'}</span><span class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input type="search" id="search" autocomplete="off" placeholder="{esc(t['search'])}" aria-label="{esc(t['search'])}"></span></label><label class="category-label"><span class="field-title">{esc(t['cat']).upper()}</span><select id="category" aria-label="{esc(t['cat'])}"><option value="all">{esc(t['all'])}</option>{opts}</select></label></div><div class="resultsbar"><span id="result-count" role="status" aria-live="polite">{len(terms)} {esc(t['result'])}</span><button type="button" id="clear" class="clear" hidden>{esc(t['clear'])} ↺</button></div><nav class="alphabet" aria-label="{esc(t['allalpha'])}">{buttons}</nav><div id="term-list">{entry_list(lang,terms)}</div><div id="no-results" class="empty" hidden><strong>{esc(t['empty'])}</strong><button id="reset-empty" type="button">{esc(t['clear'])} ↺</button></div></section><section class="contribute"><div class="wrap contribute-inner"><div><div class="section-kicker">02 / {'CONTRIBUTE' if lang=='en' else 'COLABORA'}</div><h2>{esc(t['contribute'])}</h2><p>{esc(t['contributeText'])}</p></div><a class="primary-button" href="{issue_url('new')}" target="_blank" rel="noopener noreferrer">{esc(t['suggest'])} ↗</a></div></section></main>'''+footer(lang)
 def detail(lang,t,idx,order,byid):
     tr=T[lang];other='en' if lang=='es' else 'es'
-    title=t['term_es' if lang=='es' else 'term_en']
-    secondary=t['term_en' if lang=='es' else 'term_es']
+    title=t['term_en']
+    secondary=t['term_es']
+    translation_html=f'<div class="translation" lang="es"><span>{esc(tr["spanish"])}:</span> <strong>{esc(secondary)}</strong></div>' if lang=='es' else ''
     desc=t['definition_es' if lang=='es' else 'definition_en']
     example=t['example_es' if lang=='es' else 'example_en']
     related=[byid[i] for i in t['related_ids'] if i in byid and i!=t['id']]
     related_html=''
     if related:
-        pills=''.join(f'<a class="related-pill" href="{a_link(lang,r["slug"])}">{esc(r["term_es" if lang=="es" else "term_en"])} <span aria-hidden="true">↗</span></a>' for r in related)
+        pills=''.join(f'<a class="related-pill" href="{a_link(lang,r["slug"])}">{esc(r["term_en"])} <span aria-hidden="true">↗</span></a>' for r in related)
         related_html=f'<section class="detail-section"><h2>{esc(tr["related"])}</h2><div class="related-list">{pills}</div></section>'
     source_html=f'<section class="detail-section"><h2>{esc(tr["sources"])}</h2><a class="source-link" href="{esc(t["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(tr["source"])} <span aria-hidden="true">↗</span></a></section>' if t['source_url'] else ''
     prev=order[idx-1] if idx>0 else None; nxt=order[idx+1] if idx<len(order)-1 else None
-    controls=''.join(f'<a class="pager-link {klass}" href="{a_link(lang,item["slug"])}"><small>{esc(tr[label])}</small><strong>{esc(item["term_es" if lang=="es" else "term_en"])}</strong></a>' for item,klass,label in [(prev,'previous','prev'),(nxt,'following','next')] if item)
+    controls=''.join(f'<a class="pager-link {klass}" href="{a_link(lang,item["slug"])}"><small>{esc(tr[label])}</small><strong>{esc(item["term_en"])}</strong></a>' for item,klass,label in [(prev,'previous','prev'),(nxt,'following','next')] if item)
     alt_url=SITE+other+'/term/'+quote(t['slug'])+'/'
     url=SITE+lang+'/term/'+quote(t['slug'])+'/'
     structured=json.dumps({'@context':'https://schema.org','@type':'DefinedTerm','name':title,'description':desc,'url':url,'inDefinedTermSet':SITE+lang+'/','alternateName':secondary},ensure_ascii=False).replace('<','\\u003c')
-    return head(lang,title+' | AI Development Glossary',desc,url,alt_url)+navbar(lang,t)+f'''<main id="main"><div class="wrap detail-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{index_link(lang)}">{esc(tr['home'])}</a><span aria-hidden="true">/</span><span>{esc(t['category_es'] if lang=='es' else t['category_en'])}</span></nav><div class="detail-grid"><article class="detail-content"><div class="detail-kicker">{esc(t['category_es'] if lang=='es' else t['category_en'])} <span>·</span> {esc(t['id'])}</div><h1>{esc(title)}</h1><div class="translation"><span>{esc(tr['english' if lang=='es' else 'spanish'])}:</span> <strong>{esc(secondary)}</strong></div><section class="detail-section definition"><h2>{esc(tr['definition'])}</h2><p>{esc(desc)}</p></section><section class="detail-section example"><h2>{esc(tr['example'])}</h2><p>{esc(example)}</p></section>{related_html}{source_html}<nav class="pager" aria-label="Term navigation">{controls}</nav></article><aside class="detail-aside"><div class="aside-card"><span class="aside-eyebrow">AI DEVELOPMENT GLOSSARY</span><p>{esc(tr['contributeText'])}</p><button id="copy-link" class="aside-action" type="button">⧉ {esc(tr['copy'])}</button><a class="aside-action" href="{issue_url('correct',t['term_en'])}" target="_blank" rel="noopener noreferrer">↗ {esc(tr['correct'])}</a><a class="aside-action" href="{issue_url('new')}" target="_blank" rel="noopener noreferrer">＋ {esc(tr['suggest'])}</a></div><a href="{index_link(lang)}" class="backlink">← {esc(tr['back'])}</a></aside></div></div></main><script type="application/ld+json">{structured}</script>'''+footer(lang)
+    return head(lang,title+' | AI Development Glossary',desc,url,alt_url)+navbar(lang,t)+f'''<main id="main"><div class="wrap detail-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{index_link(lang)}">{esc(tr['home'])}</a><span aria-hidden="true">/</span><span>{esc(t['category_es'] if lang=='es' else t['category_en'])}</span></nav><div class="detail-grid"><article class="detail-content"><div class="detail-kicker">{esc(t['category_es'] if lang=='es' else t['category_en'])} <span>·</span> {esc(t['id'])}</div><h1>{esc(title)}</h1>{translation_html}<section class="detail-section definition"><h2>{esc(tr['definition'])}</h2><p>{esc(desc)}</p></section><section class="detail-section example"><h2>{esc(tr['example'])}</h2><p>{esc(example)}</p></section>{related_html}{source_html}<nav class="pager" aria-label="Term navigation">{controls}</nav></article><aside class="detail-aside"><div class="aside-card"><span class="aside-eyebrow">AI DEVELOPMENT GLOSSARY</span><p>{esc(tr['contributeText'])}</p><button id="copy-link" class="aside-action" type="button">⧉ {esc(tr['copy'])}</button><a class="aside-action" href="{issue_url('correct',t['term_en'])}" target="_blank" rel="noopener noreferrer">↗ {esc(tr['correct'])}</a><a class="aside-action" href="{issue_url('new')}" target="_blank" rel="noopener noreferrer">＋ {esc(tr['suggest'])}</a></div><a href="{index_link(lang)}" class="backlink">← {esc(tr['back'])}</a></aside></div></div></main><script type="application/ld+json">{structured}</script>'''+footer(lang)
 def build():
     terms=read_data();byid={t['id']:t for t in terms}
     if OUT.exists(): shutil.rmtree(OUT)
@@ -179,7 +181,7 @@ def build():
         directory=OUT/lang;directory.mkdir()
         (directory/'index.html').write_text(landing(lang,terms),encoding='utf8')
         sitemap.append(SITE+lang+'/')
-        order=sorted(terms,key=lambda x:unicodedata.normalize('NFKD',x['term_es' if lang=='es' else 'term_en']).casefold())
+        order=sorted(terms,key=lambda x:unicodedata.normalize('NFKD',x['term_en']).casefold())
         for idx,term in enumerate(order):
             dirname=directory/'term'/term['slug'];dirname.mkdir(parents=True,exist_ok=True)
             (dirname/'index.html').write_text(detail(lang,term,idx,order,byid),encoding='utf8')
