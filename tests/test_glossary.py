@@ -37,6 +37,41 @@ class GlossaryTests(unittest.TestCase):
         page2=b.detail('en',plain,0,[plain],{plain['id']:plain})
         self.assertNotIn('Related terms</h2>',page2)
         self.assertNotIn('External source',page2)
+    def test_english_term_is_primary_in_both_languages(self):
+        # Listings and detail headings always use the English canonical name.
+        handoff=next(t for t in self.terms if t['term_en']=='Handoff')
+        for lang in ('en','es'):
+            listing=b.entry_list(lang,[handoff])
+            self.assertIn('class="term-name"',listing)
+            self.assertIn('>Handoff <span',listing)
+            self.assertNotIn('>Traspaso de control o contexto <span',listing)
+            if lang=='es':
+                self.assertIn('lang="es">Traspaso de control o contexto',listing)
+            else:
+                self.assertNotIn('class="term-translation"',listing)
+            page=b.detail(lang,handoff,0,[handoff],{t['id']:t for t in self.terms})
+            self.assertIn('<h1>Handoff</h1>',page)
+            self.assertNotIn('<h1>Traspaso de control o contexto</h1>',page)
+            self.assertIn('"name": "Handoff"',page)
+            if lang=='es': self.assertIn('Término en español',page)
+            else: self.assertNotIn('class="translation"',page)
+
+    def test_alphabetical_order_is_english_in_spanish_too(self):
+        # Spanish alphabetization previously placed a translated term under its ES initial.
+        first=next(t for t in self.terms if t['term_en']=='AI (Artificial Intelligence)')
+        handoff=next(t for t in self.terms if t['term_en']=='Handoff')
+        for lang in ('en','es'):
+            page=b.entry_list(lang,[handoff,first])
+            self.assertLess(page.index('>AI (Artificial Intelligence) <span'),page.index('>Handoff <span'))
+            self.assertIn('id="letter-A"',page)
+            self.assertIn('id="letter-H"',page)
+
+    def test_related_names_are_english_even_in_spanish(self):
+        handoff=next(t for t in self.terms if t['term_en']=='Handoff')
+        page=b.detail('es',handoff,0,[handoff],{t['id']:t for t in self.terms})
+        self.assertIn('>Agent handoff <span',page)
+        self.assertNotIn('>Traspaso entre agentes <span',page)
+
     def test_generated_index_and_json(self):
         b.build()
         for path in ('en/index.html','es/index.html','es/term/handoff/index.html','en/term/handoff/index.html','data/glossary.json','sitemap.xml'):
